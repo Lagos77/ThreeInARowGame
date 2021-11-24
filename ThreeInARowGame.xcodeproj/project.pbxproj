@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21618964274EA6390044A7B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21618963274EA6390044A7B5 /* AppDelegate.swift */; };
+		21618966274EA6390044A7B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21618965274EA6390044A7B5 /* SceneDelegate.swift */; };
+		21618968274EA6390044A7B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21618967274EA6390044A7B5 /* ViewController.swift */; };
+		2161896B274EA6390044A7B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21618969274EA6390044A7B5 /* Main.storyboard */; };
+		2161896D274EA63B0044A7B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2161896C274EA63B0044A7B5 /* Assets.xcassets */; };
+		21618970274EA63B0044A7B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161896E274EA63B0044A7B5 /* LaunchScreen.storyboard */; };
+		2161897B274EA63C0044A7B5 /* ThreeInARowGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161897A274EA63C0044A7B5 /* ThreeInARowGameTests.swift */; };
+		21618985274EA63C0044A7B5 /* ThreeInARowGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21618984274EA63C0044A7B5 /* ThreeInARowGameUITests.swift */; };
+		21618987274EA63C0044A7B5 /* ThreeInARowGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21618986274EA63C0044A7B5 /* ThreeInARowGameUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21618977274EA63C0044A7B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21618958274EA6390044A7B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2161895F274EA6390044A7B5;
+			remoteInfo = ThreeInARowGame;
+		};
+		21618981274EA63C0044A7B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21618958274EA6390044A7B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2161895F274EA6390044A7B5;
+			remoteInfo = ThreeInARowGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21618960274EA6390044A7B5 /* ThreeInARowGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeInARowGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21618963274EA6390044A7B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21618965274EA6390044A7B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		21618967274EA6390044A7B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2161896A274EA6390044A7B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2161896C274EA63B0044A7B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2161896F274EA63B0044A7B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21618971274EA63B0044A7B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21618976274EA63C0044A7B5 /* ThreeInARowGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeInARowGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2161897A274EA63C0044A7B5 /* ThreeInARowGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeInARowGameTests.swift; sourceTree = "<group>"; };
+		21618980274EA63C0044A7B5 /* ThreeInARowGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeInARowGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21618984274EA63C0044A7B5 /* ThreeInARowGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeInARowGameUITests.swift; sourceTree = "<group>"; };
+		21618986274EA63C0044A7B5 /* ThreeInARowGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeInARowGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2161895D274EA6390044A7B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21618973274EA63C0044A7B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2161897D274EA63C0044A7B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21618957274EA6390044A7B5 = {
+			isa = PBXGroup;
+			children = (
+				21618962274EA6390044A7B5 /* ThreeInARowGame */,
+				21618979274EA63C0044A7B5 /* ThreeInARowGameTests */,
+				21618983274EA63C0044A7B5 /* ThreeInARowGameUITests */,
+				21618961274EA6390044A7B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21618961274EA6390044A7B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21618960274EA6390044A7B5 /* ThreeInARowGame.app */,
+				21618976274EA63C0044A7B5 /* ThreeInARowGameTests.xctest */,
+				21618980274EA63C0044A7B5 /* ThreeInARowGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21618962274EA6390044A7B5 /* ThreeInARowGame */ = {
+			isa = PBXGroup;
+			children = (
+				21618963274EA6390044A7B5 /* AppDelegate.swift */,
+				21618965274EA6390044A7B5 /* SceneDelegate.swift */,
+				21618967274EA6390044A7B5 /* ViewController.swift */,
+				21618969274EA6390044A7B5 /* Main.storyboard */,
+				2161896C274EA63B0044A7B5 /* Assets.xcassets */,
+				2161896E274EA63B0044A7B5 /* LaunchScreen.storyboard */,
+				21618971274EA63B0044A7B5 /* Info.plist */,
+			);
+			path = ThreeInARowGame;
+			sourceTree = "<group>";
+		};
+		21618979274EA63C0044A7B5 /* ThreeInARowGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				2161897A274EA63C0044A7B5 /* ThreeInARowGameTests.swift */,
+			);
+			path = ThreeInARowGameTests;
+			sourceTree = "<group>";
+		};
+		21618983274EA63C0044A7B5 /* ThreeInARowGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				21618984274EA63C0044A7B5 /* ThreeInARowGameUITests.swift */,
+				21618986274EA63C0044A7B5 /* ThreeInARowGameUITestsLaunchTests.swift */,
+			);
+			path = ThreeInARowGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2161895F274EA6390044A7B5 /* ThreeInARowGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2161898A274EA63C0044A7B5 /* Build configuration list for PBXNativeTarget "ThreeInARowGame" */;
+			buildPhases = (
+				2161895C274EA6390044A7B5 /* Sources */,
+				2161895D274EA6390044A7B5 /* Frameworks */,
+				2161895E274EA6390044A7B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThreeInARowGame;
+			productName = ThreeInARowGame;
+			productReference = 21618960274EA6390044A7B5 /* ThreeInARowGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21618975274EA63C0044A7B5 /* ThreeInARowGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2161898D274EA63C0044A7B5 /* Build configuration list for PBXNativeTarget "ThreeInARowGameTests" */;
+			buildPhases = (
+				21618972274EA63C0044A7B5 /* Sources */,
+				21618973274EA63C0044A7B5 /* Frameworks */,
+				21618974274EA63C0044A7B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21618978274EA63C0044A7B5 /* PBXTargetDependency */,
+			);
+			name = ThreeInARowGameTests;
+			productName = ThreeInARowGameTests;
+			productReference = 21618976274EA63C0044A7B5 /* ThreeInARowGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2161897F274EA63C0044A7B5 /* ThreeInARowGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21618990274EA63C0044A7B5 /* Build configuration list for PBXNativeTarget "ThreeInARowGameUITests" */;
+			buildPhases = (
+				2161897C274EA63C0044A7B5 /* Sources */,
+				2161897D274EA63C0044A7B5 /* Frameworks */,
+				2161897E274EA63C0044A7B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21618982274EA63C0044A7B5 /* PBXTargetDependency */,
+			);
+			name = ThreeInARowGameUITests;
+			productName = ThreeInARowGameUITests;
+			productReference = 21618980274EA63C0044A7B5 /* ThreeInARowGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21618958274EA6390044A7B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					2161895F274EA6390044A7B5 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					21618975274EA63C0044A7B5 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 2161895F274EA6390044A7B5;
+					};
+					2161897F274EA63C0044A7B5 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 2161895F274EA6390044A7B5;
+					};
+				};
+			};
+			buildConfigurationList = 2161895B274EA6390044A7B5 /* Build configuration list for PBXProject "ThreeInARowGame" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21618957274EA6390044A7B5;
+			productRefGroup = 21618961274EA6390044A7B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2161895F274EA6390044A7B5 /* ThreeInARowGame */,
+				21618975274EA63C0044A7B5 /* ThreeInARowGameTests */,
+				2161897F274EA63C0044A7B5 /* ThreeInARowGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2161895E274EA6390044A7B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21618970274EA63B0044A7B5 /* LaunchScreen.storyboard in Resources */,
+				2161896D274EA63B0044A7B5 /* Assets.xcassets in Resources */,
+				2161896B274EA6390044A7B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21618974274EA63C0044A7B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2161897E274EA63C0044A7B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2161895C274EA6390044A7B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21618968274EA6390044A7B5 /* ViewController.swift in Sources */,
+				21618964274EA6390044A7B5 /* AppDelegate.swift in Sources */,
+				21618966274EA6390044A7B5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21618972274EA63C0044A7B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2161897B274EA63C0044A7B5 /* ThreeInARowGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2161897C274EA63C0044A7B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21618985274EA63C0044A7B5 /* ThreeInARowGameUITests.swift in Sources */,
+				21618987274EA63C0044A7B5 /* ThreeInARowGameUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21618978274EA63C0044A7B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2161895F274EA6390044A7B5 /* ThreeInARowGame */;
+			targetProxy = 21618977274EA63C0044A7B5 /* PBXContainerItemProxy */;
+		};
+		21618982274EA63C0044A7B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2161895F274EA6390044A7B5 /* ThreeInARowGame */;
+			targetProxy = 21618981274EA63C0044A7B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21618969274EA6390044A7B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2161896A274EA6390044A7B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2161896E274EA63B0044A7B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2161896F274EA63B0044A7B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21618988274EA63C0044A7B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		21618989274EA63C0044A7B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2161898B274EA63C0044A7B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThreeInARowGame/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ThreeInARowGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2161898C274EA63C0044A7B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThreeInARowGame/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ThreeInARowGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2161898E274EA63C0044A7B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ThreeInARowGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreeInARowGame.app/ThreeInARowGame";
+			};
+			name = Debug;
+		};
+		2161898F274EA63C0044A7B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ThreeInARowGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreeInARowGame.app/ThreeInARowGame";
+			};
+			name = Release;
+		};
+		21618991274EA63C0044A7B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ThreeInARowGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThreeInARowGame;
+			};
+			name = Debug;
+		};
+		21618992274EA63C0044A7B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ThreeInARowGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThreeInARowGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2161895B274EA6390044A7B5 /* Build configuration list for PBXProject "ThreeInARowGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21618988274EA63C0044A7B5 /* Debug */,
+				21618989274EA63C0044A7B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2161898A274EA63C0044A7B5 /* Build configuration list for PBXNativeTarget "ThreeInARowGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2161898B274EA63C0044A7B5 /* Debug */,
+				2161898C274EA63C0044A7B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2161898D274EA63C0044A7B5 /* Build configuration list for PBXNativeTarget "ThreeInARowGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2161898E274EA63C0044A7B5 /* Debug */,
+				2161898F274EA63C0044A7B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21618990274EA63C0044A7B5 /* Build configuration list for PBXNativeTarget "ThreeInARowGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21618991274EA63C0044A7B5 /* Debug */,
+				21618992274EA63C0044A7B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21618958274EA6390044A7B5 /* Project object */;
+}
