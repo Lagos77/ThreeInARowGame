@@ -51,9 +51,11 @@ class ViewController: UIViewController {
         if currentPlayer == "X" {
             sender.setTitle("X", for: .normal)
             currentPlayer = "O"
+            infoLabel.text = "Player O turn"
         } else {
             sender.setTitle("O", for: .normal)
             currentPlayer = "X"
+            infoLabel.text = "Player X turn"
         }
         
 
