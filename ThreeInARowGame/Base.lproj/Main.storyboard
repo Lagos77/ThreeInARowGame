@@ -31,7 +31,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="?"/>
                                 <connections>
-                                    <action selector="btnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bet-kG-SYb"/>
+                                    <action selector="btnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HxY-QB-a7h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arP-UG-cfu">
@@ -131,11 +131,11 @@
                         <outlet property="btnFive" destination="wGH-Df-7mx" id="OAL-Bl-ixk"/>
                         <outlet property="btnFour" destination="f0m-dS-oln" id="qUQ-oH-e9i"/>
                         <outlet property="btnNine" destination="vlk-fz-db1" id="3wP-Ok-Oo1"/>
-                        <outlet property="btnOne" destination="arP-UG-cfu" id="XVF-bf-22U"/>
+                        <outlet property="btnOne" destination="arP-UG-cfu" id="KmY-He-fsB"/>
                         <outlet property="btnSeven" destination="vQs-5X-ne0" id="eii-QO-ndQ"/>
                         <outlet property="btnSix" destination="XWB-qr-k9p" id="Y3L-Y8-G46"/>
                         <outlet property="btnThree" destination="kj4-Hh-H2j" id="rU5-e3-KwP"/>
-                        <outlet property="btnTwo" destination="B8C-UW-EVm" id="7f7-j9-igE"/>
+                        <outlet property="btnTwo" destination="B8C-UW-EVm" id="IQU-DV-Q8N"/>
                         <outlet property="infoLabel" destination="JpA-hk-MGI" id="EDv-9Y-6QC"/>
                     </connections>
                 </viewController>
