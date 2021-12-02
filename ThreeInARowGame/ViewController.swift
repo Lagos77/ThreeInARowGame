@@ -49,6 +49,8 @@ class ViewController: UIViewController {
     var player1Score = 0
     var player2Score = 0
     
+    var roundCounter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -115,8 +117,11 @@ class ViewController: UIViewController {
     
     //Deletes every string added on board and restart function boardGame
     func resetGame(){
+        roundCounter += 1
+        roundCounterLabel.text = "\(roundCounter)"
         board.removeAll()
         boardGame()
+    
         
         //For each button in the arraylist buttons, changes button title back to "?"
         for button in buttons {
