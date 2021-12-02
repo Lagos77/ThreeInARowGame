@@ -10,8 +10,11 @@ import UIKit
 class ViewController: UIViewController {
     
     private var buttons = [UIButton]()
-    private var currentPlayer = 0
+    private var currentPlayer = ""
     var board = [String]()
+    var rules = [[0,1,2],[3,4,5],[6,7,8],
+                 [0,3,6],[1,4,7],[2,5,8],
+                 [0,4,8],[6,4,2]]
     
     @IBOutlet weak var btnOne: UIButton!
     @IBOutlet weak var btnTwo: UIButton!
@@ -24,22 +27,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnNine: UIButton!
     
     @IBOutlet weak var infoLabel: UILabel!
-    var playerCross = 0
-    var playerCircle = 0
-
-    
-    var playerX = [Int]()
-    var playerO = [Int]()
-    
-    //Set scores to 0 for both player
-    
-    
-    //Array list of UIButton    var playerX = [UIButton]()
-    
-    //var crosses = "X"
-    //var circles = "O"
-    
-    
+    var player1Score = 0
+    var player2Score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,56 +57,21 @@ class ViewController: UIViewController {
         let index = buttons.firstIndex(of: sender)!
         print(index)
         gameManager(sender)
-    
-        
     }
     
     func gameManager(_ sender: UIButton){
         
-        if currentPlayer == 0 {
+        if currentPlayer == "X" {
             sender.setTitle("X", for: .normal)
-            currentPlayer = 1
+            currentPlayer = "O"
             infoLabel.text = "Player O turn"
         } else {
             sender.setTitle("O", for: .normal)
-            currentPlayer = 0
+            currentPlayer = "X"
             infoLabel.text = "Player X turn"
         }
-        //Set button to be clicked only once
-        sender.isEnabled = false
         
 
-    }
-    //Recives a string and returns a bool
-    //Check win possibilities if symbol on button title matches with each other
-    func checkWin(_ string: String) -> Bool {
-        
-        //Horizontical possibilites
-        if thisSymbol(btnOne, string) && thisSymbol(btnTwo, string) && thisSymbol(btnThree, string){
-            return true
-        }
-        if thisSymbol(btnFour, string) && thisSymbol(btnFive, string) && thisSymbol(btnSix, string){
-            return true
-        }
-        if thisSymbol(btnSeven, string) && thisSymbol(btnEight, string) && thisSymbol(btnNine, string){
-            return true
-        }
-        
-        //Diagonal possibilities
-        if thisSymbol(btnOne, string) && thisSymbol(btnFive, string) && thisSymbol(btnNine, string){
-            return true
-        }
-        if thisSymbol(btnSeven, string) && thisSymbol(btnFive, string) && thisSymbol(btnThree, string){
-            return true
-        }
-        
-        return false
-    }
-    
-    //Recives a UIButton and a string and return a bool
-    //If the button title has a X or O, if so return true
-    func thisSymbol(_ button : UIButton,_ symbol: String) -> Bool {
-        return button.title(for: .normal) == symbol
     }
     
     func boardGame(){
@@ -128,17 +82,4 @@ class ViewController: UIViewController {
     
     }
     
-    
-    //Function doesnt work properly. Suppose to show at up-start
-    /*func playerNameAlert(){
-        
-        
-        let alert = UIAlertController(title: "Enter player one name", message: nil, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
-        
-        
-        
-    }
-    */
 }
