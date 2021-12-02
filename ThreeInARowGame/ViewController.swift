@@ -9,9 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //Buttons added into a variable "buttons" which is an arraylist.
     private var buttons = [UIButton]()
+    
+    //Setting current player to empty space.
     private var currentPlayer = ""
+    
+    //Game board is a list of string.
     var board = [String]()
+    
+    //Variable rules show all winning possibilities.
     var rules = [[0,1,2],[3,4,5],[6,7,8],
                  [0,3,6],[1,4,7],[2,5,8],
                  [0,4,8],[6,4,2]]
@@ -27,12 +34,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnNine: UIButton!
     
     @IBOutlet weak var infoLabel: UILabel!
+    
+    //Setting both player scores to 0
     var player1Score = 0
     var player2Score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+    //Adding all the buttons to the arraylist.
         buttons.append(btnOne)
         buttons.append(btnTwo)
         buttons.append(btnThree)
@@ -47,7 +57,10 @@ class ViewController: UIViewController {
     
     }
     
+
     @IBAction func btnTapped(_ sender: UIButton) {
+        
+        //Getting the index of each button and sender is not empty.
         let index = buttons.firstIndex(of: sender)!
         
         if !board[index].isEmpty {
@@ -74,29 +87,33 @@ class ViewController: UIViewController {
             let player1 = board[rule[1]]
             let player2 = board[rule[2]]
             
-            if player0 == player1, player1 == player2, !player0.isEmpty{
+            if player0 == player1 && player1 == player2 && !player0.isEmpty{
                 winnerAlert()
             }
         }
+        //If gameboard is not empty, function drawAlert() iniziates.
         if !board.contains(""){
             drawAlert()
         }
     }
     
     func boardGame(){
-        for i in 0..<buttons.count{
+        for _ in 0..<buttons.count{
             board.append("")
         }
     }
     
+    //Deletes every string added on board and restart function boardGame
     func resetGame(){
         board.removeAll()
         boardGame()
         
+        //For each button in the arraylist buttons, changes button title back to "?"
         for button in buttons {
             button.setTitle("?", for: .normal)
         }
     }
+    
     
     func winnerAlert(){
         let winAlert = UIAlertController(title: "Congratulations!", message: "You are a winner!", preferredStyle: .alert)
