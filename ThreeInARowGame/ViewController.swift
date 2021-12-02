@@ -9,9 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //Buttons added into a variable "buttons" which is an arraylist.
     private var buttons = [UIButton]()
-    private var currentPlayer = 0
+    
+    //Setting current player to empty space.
+    private var currentPlayer = ""
+    
+    //Game board is a list of string.
     var board = [String]()
+    
+    //Variable rules show all winning possibilities.
+    var rules = [[0,1,2],[3,4,5],[6,7,8],
+                 [0,3,6],[1,4,7],[2,5,8],
+                 [0,4,8],[6,4,2]]
     
     @IBOutlet weak var btnOne: UIButton!
     @IBOutlet weak var btnTwo: UIButton!
@@ -24,26 +34,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnNine: UIButton!
     
     @IBOutlet weak var infoLabel: UILabel!
-    var playerCross = 0
-    var playerCircle = 0
-
     
-    var playerX = [Int]()
-    var playerO = [Int]()
-    
-    //Set scores to 0 for both player
-    
-    
-    //Array list of UIButton    var playerX = [UIButton]()
-    
-    //var crosses = "X"
-    //var circles = "O"
-    
-    
+    //Setting both player scores to 0
+    var player1Score = 0
+    var player2Score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+    //Adding all the buttons to the arraylist.
         buttons.append(btnOne)
         buttons.append(btnTwo)
         buttons.append(btnThree)
@@ -56,89 +55,82 @@ class ViewController: UIViewController {
         
         boardGame()
     
-        //Initilaizing cross as first move
-        //var firstTurn = tappedCross
-        //var currentTurn = tappedCross
-        //playerNameAlert()
-        
-        
     }
     
+
     @IBAction func btnTapped(_ sender: UIButton) {
+        
+        //Getting the index of each button and sender is not empty.
         let index = buttons.firstIndex(of: sender)!
-        print(index)
-        gameManager(sender)
-    
         
-    }
-    
-    func gameManager(_ sender: UIButton){
+        if !board[index].isEmpty {
+            return
+        }
         
-        if currentPlayer == 0 {
+        if currentPlayer == "X" {
             sender.setTitle("X", for: .normal)
-            currentPlayer = 1
+            currentPlayer = "O"
+            board[index] = "X"
             infoLabel.text = "Player O turn"
         } else {
             sender.setTitle("O", for: .normal)
-            currentPlayer = 0
+            currentPlayer = "X"
+            board[index] = "O"
             infoLabel.text = "Player X turn"
         }
-        //Set button to be clicked only once
-        sender.isEnabled = false
-        
-
-    }
-    //Recives a string and returns a bool
-    //Check win possibilities if symbol on button title matches with each other
-    func checkWin(_ string: String) -> Bool {
-        
-        //Horizontical possibilites
-        if thisSymbol(btnOne, string) && thisSymbol(btnTwo, string) && thisSymbol(btnThree, string){
-            return true
-        }
-        if thisSymbol(btnFour, string) && thisSymbol(btnFive, string) && thisSymbol(btnSix, string){
-            return true
-        }
-        if thisSymbol(btnSeven, string) && thisSymbol(btnEight, string) && thisSymbol(btnNine, string){
-            return true
-        }
-        
-        //Diagonal possibilities
-        if thisSymbol(btnOne, string) && thisSymbol(btnFive, string) && thisSymbol(btnNine, string){
-            return true
-        }
-        if thisSymbol(btnSeven, string) && thisSymbol(btnFive, string) && thisSymbol(btnThree, string){
-            return true
-        }
-        
-        return false
+        checkWinner()
     }
     
-    //Recives a UIButton and a string and return a bool
-    //If the button title has a X or O, if so return true
-    func thisSymbol(_ button : UIButton,_ symbol: String) -> Bool {
-        return button.title(for: .normal) == symbol
+    func checkWinner() {
+        for rule in rules{
+            let player0 = board[rule[0]]
+            let player1 = board[rule[1]]
+            let player2 = board[rule[2]]
+            
+            if player0 == player1 && player1 == player2 && !player0.isEmpty{
+                winnerAlert()
+            }
+        }
+        //If gameboard is not empty, function drawAlert() iniziates.
+        if !board.contains(""){
+            drawAlert()
+        }
     }
     
     func boardGame(){
-        for i in 0..<buttons.count{
+        for _ in 0..<buttons.count{
             board.append("")
-            
         }
+    }
     
+    //Deletes every string added on board and restart function boardGame
+    func resetGame(){
+        board.removeAll()
+        boardGame()
+        
+        //For each button in the arraylist buttons, changes button title back to "?"
+        for button in buttons {
+            button.setTitle("?", for: .normal)
+        }
     }
     
     
-    //Function doesnt work properly. Suppose to show at up-start
-    /*func playerNameAlert(){
-        
-        
-        let alert = UIAlertController(title: "Enter player one name", message: nil, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
-        
-        
-        
+    func winnerAlert(){
+        let winAlert = UIAlertController(title: "Congratulations!", message: "You are a winner!", preferredStyle: .alert)
+        let winAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.resetGame()
+        }
+        winAlert.addAction(winAction)
+        present(winAlert, animated: true, completion: nil)
     }
-    */
+    
+    func drawAlert(){
+        let drawAlert = UIAlertController(title: "Woops!", message: "Draw game!", preferredStyle: .alert)
+        let drawAction = UIAlertAction(title: "Try again", style: .default) { _ in
+            self.resetGame()
+        }
+        drawAlert.addAction(drawAction)
+        present(drawAlert, animated: true, completion: nil)
+    }
+    
 }
