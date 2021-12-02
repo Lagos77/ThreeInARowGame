@@ -45,12 +45,6 @@ class ViewController: UIViewController {
         
         boardGame()
     
-        //Initilaizing cross as first move
-        //var firstTurn = tappedCross
-        //var currentTurn = tappedCross
-        //playerNameAlert()
-        
-        
     }
     
     @IBAction func btnTapped(_ sender: UIButton) {
@@ -71,14 +65,55 @@ class ViewController: UIViewController {
             board[index] = "O"
             infoLabel.text = "Player X turn"
         }
+        checkWinner()
+    }
+    
+    func checkWinner() {
+        for rule in rules{
+            let player0 = board[rule[0]]
+            let player1 = board[rule[1]]
+            let player2 = board[rule[2]]
+            
+            if player0 == player1, player1 == player2, !player0.isEmpty{
+                winnerAlert()
+            }
+        }
+        if !board.contains(""){
+            drawAlert()
+        }
     }
     
     func boardGame(){
         for i in 0..<buttons.count{
             board.append("")
-            
         }
+    }
     
+    func resetGame(){
+        board.removeAll()
+        boardGame()
+        
+        for button in buttons {
+            button.setTitle("?", for: .normal)
+        }
+    }
+    
+    func winnerAlert(){
+        let winAlert = UIAlertController(title: "Congratulations!", message: "You are a winner!", preferredStyle: .alert)
+        let winAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.resetGame()
+        }
+        winAlert.addAction(winAction)
+        present(winAlert, animated: true, completion: nil)
+    }
+    
+    func drawAlert(){
+        let drawAlert = UIAlertController(title: "Woops!", message: "Draw game!", preferredStyle: .alert)
+        let drawAction = UIAlertAction(title: "Try again", style: .default) { _ in
+            self.resetGame()
+        }
+        drawAlert.addAction(drawAction)
+        present(drawAlert, animated: true, completion: nil)
     }
     
 }
