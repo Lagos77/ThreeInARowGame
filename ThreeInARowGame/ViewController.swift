@@ -33,6 +33,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnEight: UIButton!
     @IBOutlet weak var btnNine: UIButton!
     
+    
+    @IBOutlet weak var roundLabel: UILabel!
+    @IBOutlet weak var roundCounterLabel: UILabel!
+    
+    @IBOutlet weak var playerOneLabel: UILabel!
+    @IBOutlet weak var playerTwoLabel: UILabel!
+    
+    @IBOutlet weak var playerOneScore: UILabel!
+    @IBOutlet weak var playerTwoScore: UILabel!
+    
     @IBOutlet weak var infoLabel: UILabel!
     
     //Setting both player scores to 0
