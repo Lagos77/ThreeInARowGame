@@ -55,23 +55,22 @@ class ViewController: UIViewController {
     
     @IBAction func btnTapped(_ sender: UIButton) {
         let index = buttons.firstIndex(of: sender)!
-        print(index)
-        gameManager(sender)
-    }
-    
-    func gameManager(_ sender: UIButton){
+        
+        if !board[index].isEmpty {
+            return
+        }
         
         if currentPlayer == "X" {
             sender.setTitle("X", for: .normal)
             currentPlayer = "O"
+            board[index] = "X"
             infoLabel.text = "Player O turn"
         } else {
             sender.setTitle("O", for: .normal)
             currentPlayer = "X"
+            board[index] = "O"
             infoLabel.text = "Player X turn"
         }
-        
-
     }
     
     func boardGame(){
