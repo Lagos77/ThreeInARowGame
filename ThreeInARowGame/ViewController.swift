@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     private var buttons = [UIButton]()
     
     //Setting current player to empty space.
-    private var currentPlayer = ""
+    private var currentPlayer = 2 // Player X
     
     //Game board is a list of string.
     var board = [String]()
@@ -33,11 +33,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnEight: UIButton!
     @IBOutlet weak var btnNine: UIButton!
     
+    @IBOutlet weak var playAI: UIButton!
+    @IBOutlet weak var addNames: UIButton!
+    
+    @IBOutlet weak var roundLabel: UILabel!
+    @IBOutlet weak var roundCounterLabel: UILabel!
+    
+    @IBOutlet weak var playerOneLabel: UILabel!
+    @IBOutlet weak var playerTwoLabel: UILabel!
+    
+    @IBOutlet weak var playerOneScore: UILabel!
+    @IBOutlet weak var playerTwoScore: UILabel!
+    
     @IBOutlet weak var infoLabel: UILabel!
     
     //Setting both player scores to 0
     var player1Score = 0
     var player2Score = 0
+    
+    var roundCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +68,7 @@ class ViewController: UIViewController {
         buttons.append(btnNine)
         
         boardGame()
+
     
     }
     
@@ -67,36 +82,69 @@ class ViewController: UIViewController {
             return
         }
         
-        if currentPlayer == "X" {
-            sender.setTitle("X", for: .normal)
-            currentPlayer = "O"
-            board[index] = "X"
-            infoLabel.text = "Player O turn"
-        } else {
+        if currentPlayer == 1 {
             sender.setTitle("O", for: .normal)
-            currentPlayer = "X"
+            currentPlayer = 2
             board[index] = "O"
             infoLabel.text = "Player X turn"
+        } else {
+            sender.setTitle("X", for: .normal)
+            currentPlayer = 1
+            board[index] = "X"
+            infoLabel.text = "Player O turn"
         }
         checkWinner()
     }
     
-    func checkWinner() {
-        for rule in rules{
-            let player0 = board[rule[0]]
-            let player1 = board[rule[1]]
-            let player2 = board[rule[2]]
-            
-            if player0 == player1 && player1 == player2 && !player0.isEmpty{
-                winnerAlert()
-            }
+    @IBAction func tappedAI(_ senderAI: UIButton) {
+        playerTwoLabel.text = "Computer"
+        board.removeAll()
+        boardGame()
+        for button in buttons {
+            button.setTitle("?", for: .normal)
         }
-        //If gameboard is not empty, function drawAlert() iniziates.
+        aiGameplay()
+    }
+    
+    
+    //Checks player corrisponding position on the board, following by the three rules.
+    func checkWinner() {
+        var winCheck = 0
+        for rule in rules{
+            //Applies rules horizontical, vertical and diagonal.
+            let playeratPos0 = board[rule[0]]
+            let playeratPos1 = board[rule[1]]
+            let playeratPos2 = board[rule[2]]
+            
+            //If the rules are equal to each other and board is not empty
+            if playeratPos0 == playeratPos1 && playeratPos1 == playeratPos2 && currentPlayer == 1 && !playeratPos0.isEmpty{
+                winCheck = 1
+            }
+            if playeratPos0 == playeratPos1 && playeratPos1 == playeratPos2 && currentPlayer == 2 && !playeratPos0.isEmpty{
+                winCheck = 2
+
+            }
+            if winCheck == 1 {
+                player1Score += 1
+                playerOneScore.text = "\(player1Score)"
+                winnerAlert()
+                return
+            } else if winCheck == 2{
+                player2Score += 1
+                playerTwoScore.text = "\(player2Score)"
+                winnerAlert()
+                return
+            }
+
+        }
+        //If gameboard is not empty and there is no winner, function drawAlert() iniziates.
         if !board.contains(""){
             drawAlert()
         }
     }
     
+    //Size of the board is the size of the buttons
+    //Initilize with empty string
     func boardGame(){
         for _ in 0..<buttons.count{
             board.append("")
@@ -105,8 +153,11 @@ class ViewController: UIViewController {
     
     //Deletes every string added on board and restart function boardGame
     func resetGame(){
+        roundCounter += 1
+        roundCounterLabel.text = "\(roundCounter)"
         board.removeAll()
         boardGame()
+    
         
         //For each button in the arraylist buttons, changes button title back to "?"
         for button in buttons {
@@ -133,4 +184,15 @@ class ViewController: UIViewController {
         present(drawAlert, animated: true, completion: nil)
     }
     
+    func aiGameplay(){
+        var index = Int.random(in: 0...8)
+        
+        
+        var emptyButtons = [Int]()
+        
+        for f in 0..<buttons.count{
+          
+            
+        }
+    }
 }
