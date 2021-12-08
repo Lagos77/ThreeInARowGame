@@ -184,15 +184,6 @@ class ViewController: UIViewController {
         present(drawAlert, animated: true, completion: nil)
     }
     
-    func aiGameplay(){
-        var index = Int.random(in: 0...8)
-        
-        
-        var emptyButtons = [Int]()
-        
-        for f in 0..<buttons.count{
-          
-            
-        }
-    }
-}
+    func aiGameplay(){}
+    
+   }
