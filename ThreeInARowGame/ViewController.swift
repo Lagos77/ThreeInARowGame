@@ -47,6 +47,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var infoLabel: UILabel!
     
+    var recieveNameOne : String?
+    var recieveNameTwo : String?
+    
     //Setting both player scores to 0
     var player1Score = 0
     var player2Score = 0
@@ -66,6 +69,9 @@ class ViewController: UIViewController {
         buttons.append(btnSeven)
         buttons.append(btnEight)
         buttons.append(btnNine)
+        
+        playerOneLabel.text = recieveNameOne
+        playerTwoLabel.text = recieveNameTwo
         
         boardGame()
 

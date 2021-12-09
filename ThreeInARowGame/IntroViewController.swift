@@ -22,13 +22,23 @@ class IntroViewController: UIViewController {
     }
     
     @IBAction func play1v1(_ sender: UIButton) {
-        if enterPlayer1Name.text == nil {
+
+        if enterPlayer1Name.text == "" || enterPlayer2Name.text == "" {
             show1v1Alert()
-        } else {
             
+        } else {
             performSegue(withIdentifier: segueToGameplayViewID, sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == segueToGameplayViewID) {
+            let destinationVC = segue.destination as! ViewController
+            destinationVC.recieveNameOne = enterPlayer1Name.text
+            destinationVC.recieveNameTwo = enterPlayer2Name.text
             
         }
+        
     }
     
     
