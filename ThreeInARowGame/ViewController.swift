@@ -47,6 +47,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var infoLabel: UILabel!
     
+    var recieveNameOne : String? = ""
+    var recieveNameTwo : String? = ""
+    
     //Setting both player scores to 0
     var player1Score = 0
     var player2Score = 0
@@ -67,6 +70,9 @@ class ViewController: UIViewController {
         buttons.append(btnEight)
         buttons.append(btnNine)
         
+        playerOneLabel.text = recieveNameOne
+        playerTwoLabel.text = recieveNameTwo
+        
         boardGame()
 
     
@@ -82,16 +88,18 @@ class ViewController: UIViewController {
             return
         }
         
+
+        
         if currentPlayer == 1 {
             sender.setTitle("O", for: .normal)
             currentPlayer = 2
             board[index] = "O"
-            infoLabel.text = "Player X turn"
+            infoLabel.text = "\(playerOneLabel.text ?? "") turn !"
         } else {
             sender.setTitle("X", for: .normal)
             currentPlayer = 1
             board[index] = "X"
-            infoLabel.text = "Player O turn"
+            infoLabel.text = "\(playerTwoLabel.text ?? "") turn !"
         }
         checkWinner()
     }
@@ -184,15 +192,6 @@ class ViewController: UIViewController {
         present(drawAlert, animated: true, completion: nil)
     }
     
-    func aiGameplay(){
-        var index = Int.random(in: 0...8)
-        
-        
-        var emptyButtons = [Int]()
-        
-        for f in 0..<buttons.count{
-          
-            
-        }
-    }
-}
+    func aiGameplay(){}
+    
+   }

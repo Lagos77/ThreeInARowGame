@@ -16,6 +16,7 @@
 		2161897B274EA63C0044A7B5 /* ThreeInARowGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161897A274EA63C0044A7B5 /* ThreeInARowGameTests.swift */; };
 		21618985274EA63C0044A7B5 /* ThreeInARowGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21618984274EA63C0044A7B5 /* ThreeInARowGameUITests.swift */; };
 		21618987274EA63C0044A7B5 /* ThreeInARowGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21618986274EA63C0044A7B5 /* ThreeInARowGameUITestsLaunchTests.swift */; };
+		217E637E2761401F00E2B252 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E637D2761401F00E2B252 /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		21618980274EA63C0044A7B5 /* ThreeInARowGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeInARowGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21618984274EA63C0044A7B5 /* ThreeInARowGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeInARowGameUITests.swift; sourceTree = "<group>"; };
 		21618986274EA63C0044A7B5 /* ThreeInARowGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeInARowGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		217E637D2761401F00E2B252 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				21618965274EA6390044A7B5 /* SceneDelegate.swift */,
 				21618967274EA6390044A7B5 /* ViewController.swift */,
 				21618969274EA6390044A7B5 /* Main.storyboard */,
+				217E637D2761401F00E2B252 /* IntroViewController.swift */,
 				2161896C274EA63B0044A7B5 /* Assets.xcassets */,
 				2161896E274EA63B0044A7B5 /* LaunchScreen.storyboard */,
 				21618971274EA63B0044A7B5 /* Info.plist */,
@@ -261,6 +264,7 @@
 				21618968274EA6390044A7B5 /* ViewController.swift in Sources */,
 				21618964274EA6390044A7B5 /* AppDelegate.swift in Sources */,
 				21618966274EA6390044A7B5 /* SceneDelegate.swift in Sources */,
+				217E637E2761401F00E2B252 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
