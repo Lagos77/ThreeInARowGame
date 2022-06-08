@@ -27,16 +27,6 @@
                                     <action selector="play1v1:" destination="Rbt-fB-L8V" eventType="touchUpInside" id="uyH-zF-fGL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oz-nG-IdX">
-                                <rect key="frame" x="114" y="719" width="187" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Play Vs AI"/>
-                                <connections>
-                                    <action selector="playVsAI:" destination="Rbt-fB-L8V" eventType="touchUpInside" id="O8t-0x-CaV"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name for player 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-dh-5c7">
                                 <rect key="frame" x="111" y="431" width="192" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -227,15 +217,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="tRL-af-ehr"/>
                     <connections>
-                        <outlet property="btnEight" destination="SFy-L3-CXu" id="RBs-Sk-A6x"/>
-                        <outlet property="btnFive" destination="wGH-Df-7mx" id="OAL-Bl-ixk"/>
-                        <outlet property="btnFour" destination="f0m-dS-oln" id="qUQ-oH-e9i"/>
-                        <outlet property="btnNine" destination="vlk-fz-db1" id="3wP-Ok-Oo1"/>
-                        <outlet property="btnOne" destination="arP-UG-cfu" id="KmY-He-fsB"/>
-                        <outlet property="btnSeven" destination="vQs-5X-ne0" id="eii-QO-ndQ"/>
-                        <outlet property="btnSix" destination="XWB-qr-k9p" id="Y3L-Y8-G46"/>
-                        <outlet property="btnThree" destination="kj4-Hh-H2j" id="rU5-e3-KwP"/>
-                        <outlet property="btnTwo" destination="B8C-UW-EVm" id="IQU-DV-Q8N"/>
                         <outlet property="infoLabel" destination="JpA-hk-MGI" id="EDv-9Y-6QC"/>
                         <outlet property="playerOneLabel" destination="rVK-oO-xz3" id="qer-kM-tbf"/>
                         <outlet property="playerOneScore" destination="SNC-Cr-vHp" id="5Pz-lD-OUt"/>
@@ -243,6 +224,15 @@
                         <outlet property="playerTwoScore" destination="DnF-dK-SG1" id="lx3-yC-f06"/>
                         <outlet property="roundCounterLabel" destination="cIY-6f-NTW" id="x5K-RN-qlX"/>
                         <outlet property="roundLabel" destination="fGc-5X-ODB" id="Ahb-jW-pSz"/>
+                        <outletCollection property="collectionOfButtons" destination="arP-UG-cfu" collectionClass="NSMutableArray" id="DsT-EX-rjf"/>
+                        <outletCollection property="collectionOfButtons" destination="B8C-UW-EVm" collectionClass="NSMutableArray" id="8Gm-WZ-iDH"/>
+                        <outletCollection property="collectionOfButtons" destination="kj4-Hh-H2j" collectionClass="NSMutableArray" id="sqA-d5-kWt"/>
+                        <outletCollection property="collectionOfButtons" destination="f0m-dS-oln" collectionClass="NSMutableArray" id="Q5g-uV-YVK"/>
+                        <outletCollection property="collectionOfButtons" destination="wGH-Df-7mx" collectionClass="NSMutableArray" id="vGK-ks-VFW"/>
+                        <outletCollection property="collectionOfButtons" destination="XWB-qr-k9p" collectionClass="NSMutableArray" id="zH0-zU-Trk"/>
+                        <outletCollection property="collectionOfButtons" destination="vQs-5X-ne0" collectionClass="NSMutableArray" id="t1r-KR-jo6"/>
+                        <outletCollection property="collectionOfButtons" destination="SFy-L3-CXu" collectionClass="NSMutableArray" id="pqi-cm-I5p"/>
+                        <outletCollection property="collectionOfButtons" destination="vlk-fz-db1" collectionClass="NSMutableArray" id="dhK-J0-dTS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

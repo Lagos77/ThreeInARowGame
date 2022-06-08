@@ -41,32 +41,6 @@ class IntroViewController: UIViewController {
         
     }
     
-    
-    @IBAction func playVsAI(_ sender: UIButton) {
-        showAIAlert()
-        performSegue(withIdentifier: segueToGameplayViewID, sender: self)
-        
-    }
-    
-    func showAIAlert(){
-        let alertPlay = UIAlertController(title: "Enter player name", message: nil, preferredStyle: .alert)
-        let cancelPlay = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
-        
-        alertPlay.addTextField { textField in
-            textField.placeholder = "Place enter name"
-        }
-        
-        let okPlay = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { action in
-            if let name = alertPlay.textFields?.first?.text {
-            }
-        }
-        
-        alertPlay.addAction(cancelPlay)
-        alertPlay.addAction(okPlay)
-        
-        self.present(alertPlay, animated: true, completion: nil)
-    }
-    
     func show1v1Alert(){
         let alertNameEmpty = UIAlertController(title: "Something is wrong...", message: "You need to enter name for both players.", preferredStyle: .alert)
         let okEmpty = UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default) { _ in
