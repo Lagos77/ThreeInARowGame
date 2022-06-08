@@ -23,15 +23,7 @@ class ViewController: UIViewController {
                  [0,3,6],[1,4,7],[2,5,8],
                  [0,4,8],[6,4,2]]
     
-    @IBOutlet weak var btnOne: UIButton!
-    @IBOutlet weak var btnTwo: UIButton!
-    @IBOutlet weak var btnThree: UIButton!
-    @IBOutlet weak var btnFour: UIButton!
-    @IBOutlet weak var btnFive: UIButton!
-    @IBOutlet weak var btnSix: UIButton!
-    @IBOutlet weak var btnSeven: UIButton!
-    @IBOutlet weak var btnEight: UIButton!
-    @IBOutlet weak var btnNine: UIButton!
+    @IBOutlet var collectionOfButtons: Array<UIButton>?
     
     @IBOutlet weak var playAI: UIButton!
     @IBOutlet weak var addNames: UIButton!
@@ -60,15 +52,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     
     //Adding all the buttons to the arraylist.
-        buttons.append(btnOne)
-        buttons.append(btnTwo)
-        buttons.append(btnThree)
-        buttons.append(btnFour)
-        buttons.append(btnFive)
-        buttons.append(btnSix)
-        buttons.append(btnSeven)
-        buttons.append(btnEight)
-        buttons.append(btnNine)
+        
+        if let collectionOfButtons = collectionOfButtons {
+            for button in collectionOfButtons {
+                buttons.append(button)
+            }
+        }
         
         playerOneLabel.text = recieveNameOne
         playerTwoLabel.text = recieveNameTwo
@@ -88,8 +77,6 @@ class ViewController: UIViewController {
             return
         }
         
-
-        
         if currentPlayer == 1 {
             sender.setTitle("O", for: .normal)
             currentPlayer = 2
@@ -104,15 +91,7 @@ class ViewController: UIViewController {
         checkWinner()
     }
     
-    @IBAction func tappedAI(_ senderAI: UIButton) {
-        playerTwoLabel.text = "Computer"
-        board.removeAll()
-        boardGame()
-        for button in buttons {
-            button.setTitle("?", for: .normal)
-        }
-        aiGameplay()
-    }
+
     
     
     //Checks player corrisponding position on the board, following by the three rules.
@@ -192,6 +171,4 @@ class ViewController: UIViewController {
         present(drawAlert, animated: true, completion: nil)
     }
     
-    func aiGameplay(){}
-    
-   }
+}
