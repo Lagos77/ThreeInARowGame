@@ -34,8 +34,10 @@ class IntroViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == segueToGameplayViewID) {
             let destinationVC = segue.destination as! ViewController
-            destinationVC.recieveNameOne = enterPlayer1Name.text
-            destinationVC.recieveNameTwo = enterPlayer2Name.text
+//            destinationVC.recieveNameOne = enterPlayer1Name.text
+//            destinationVC.recieveNameTwo = enterPlayer2Name.text
+            destinationVC.playerOne.name = enterPlayer1Name.text ?? "PlayerOne"
+            destinationVC.playerTwo.name = enterPlayer2Name.text ?? "PlayerTwo"
             
         }
         
