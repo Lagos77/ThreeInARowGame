@@ -47,8 +47,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var infoLabel: UILabel!
     
-    var recieveNameOne : String? = ""
-    var recieveNameTwo : String? = ""
     
     //Setting both player scores to 0
     var player1Score = 0
@@ -56,9 +54,13 @@ class ViewController: UIViewController {
     
     var roundCounter = 0
     
+    var playerOne = Player(name: "", score: 0)
+    var playerTwo = Player(name: "", score: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        
     //Adding all the buttons to the arraylist.
         buttons.append(btnOne)
         buttons.append(btnTwo)
@@ -70,14 +72,25 @@ class ViewController: UIViewController {
         buttons.append(btnEight)
         buttons.append(btnNine)
         
-        playerOneLabel.text = recieveNameOne
-        playerTwoLabel.text = recieveNameTwo
+        playerOneLabel.text = playerOne.name
+        playerTwoLabel.text = playerTwo.name
+        
         
         boardGame()
 
     
     }
     
+    
+    // Currentplayer visades inte innan första knapptrycket.
+    
+    func showCurrentPlayer() {
+        if currentPlayer == 1 {
+            infoLabel.text = "\(playerOneLabel.text ?? "") turn !"
+        } else {
+            infoLabel.text = "\(playerTwoLabel.text ?? "") turn !"
+        }
+    }
 
     @IBAction func btnTapped(_ sender: UIButton) {
         
@@ -94,13 +107,14 @@ class ViewController: UIViewController {
             sender.setTitle("O", for: .normal)
             currentPlayer = 2
             board[index] = "O"
-            infoLabel.text = "\(playerOneLabel.text ?? "") turn !"
+            // infoLabel.text = "\(playerOneLabel.text ?? "") turn !"
         } else {
             sender.setTitle("X", for: .normal)
             currentPlayer = 1
             board[index] = "X"
-            infoLabel.text = "\(playerTwoLabel.text ?? "") turn !"
+            // infoLabel.text = "\(playerTwoLabel.text ?? "") turn !"
         }
+        showCurrentPlayer()
         checkWinner()
     }
     
@@ -133,13 +147,14 @@ class ViewController: UIViewController {
 
             }
             if winCheck == 1 {
-                player1Score += 1
-                playerOneScore.text = "\(player1Score)"
+                //player1Score += 1
+                playerOne.score += 1
+                playerOneScore.text = "\(playerOne.score)"
                 winnerAlert()
                 return
             } else if winCheck == 2{
-                player2Score += 1
-                playerTwoScore.text = "\(player2Score)"
+                playerTwo.score += 1
+                playerTwoScore.text = "\(playerTwo.score)"
                 winnerAlert()
                 return
             }
@@ -157,6 +172,7 @@ class ViewController: UIViewController {
         for _ in 0..<buttons.count{
             board.append("")
         }
+        showCurrentPlayer()
     }
     
     //Deletes every string added on board and restart function boardGame
